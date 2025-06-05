@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- SEO -->
+
+    <meta
+      name="keywords"
+      content="Phonikud, Hebrew TTS, text-to-speech, phonetic disambiguation, real-time synthesis, Hebrew NLP, speech synthesis"
+    />
+
+    <!-- HTML Meta Tags -->
+    <title>
+      Phonikud: Hebrew Grapheme-to-Phoneme Conversion for Real-Time
+      Text-to-Speech
+    </title>
+    <meta
+      name="description"
+      content="A novel approach to Hebrew TTS that addresses phonetic ambiguity through advanced language modeling techniques for real-time speech synthesis."
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://phonikud-paper.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Phonikud: Hebrew Grapheme-to-Phoneme Conversion for Real-Time Text-to-Speech"
+    />
+    <meta
+      property="og:description"
+      content="A novel approach to Hebrew TTS that addresses phonetic ambiguity through advanced language modeling techniques for real-time speech synthesis."
+    />
+    <meta property="og:image" content="media/banner.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="phonikud-paper.netlify.app" />
+    <meta property="twitter:url" content="https://phonikud-paper.netlify.app" />
+    <meta
+      name="twitter:title"
+      content="Phonikud: Hebrew Grapheme-to-Phoneme Conversion for Real-Time Text-to-Speech"
+    />
+    <meta
+      name="twitter:description"
+      content="A novel approach to Hebrew TTS that addresses phonetic ambiguity through advanced language modeling techniques for real-time speech synthesis."
+    />
+    <meta name="twitter:image" content="media/banner.png" />
+
+    <!-- END OF SEO -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      Phonikud: Hebrew Grapheme-to-Phoneme Conversion for Real-Time
+      Text-to-Speech
+    </title>
+    <link rel="icon" type="image/x-icon" href="./media/favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Phonikud</h1>
+          <p class="hero-subtitle">
+            Hebrew Grapheme-to-Phoneme Conversion for Real-Time Text-to-Speech
+          </p>
+
+          <div class="authors">
+            <div class="author-list">
+              <span class="author">Yakov Kolani<sup>1</sup></span>
+              <span class="author">Maxim Melichov<sup>2</sup></span>
+              <span class="author">Cobi Calev<sup>3</sup></span>
+              <span class="author">Morris Alper<sup>4</sup></span>
+            </div>
+            <p class="affiliation">Advanced Speech Processing Laboratory</p>
+          </div>
+
+          <div class="btn-group">
+            <a href="./media/phonikud.pdf" target="_blank" class="btn btn-primary">
+              <i class="fas fa-file-pdf"></i>
+              Paper
+            </a>
+            <a
+              href="https://github.com/thewh1teagle/phonikud"
+              target="_blank"
+              class="btn"
+            >
+              <i class="fab fa-github"></i>
+              Code
+            </a>
+            <a
+              href="https://huggingface.co/spaces/thewh1teagle/phonikud-tts"
+              target="_blank"
+              class="btn"
+            >
+              <i class="fas fa-play"></i>
+              Demo
+            </a>
+            <a href="./media/phonikud.pdf" target="_blank" class="btn">
+              <img
+                src="media/arxiv.svg"
+                alt="arXiv"
+                style="height: 1em; vertical-align: middle"
+              />
+              arXiv
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="architecture">
+      <div class="container">
+        <div class="architecture-visual">
+          <div class="architecture-placeholder">
+            <img
+              src="media/architecture.svg"
+              alt="Model Architecture"
+              class="architecture-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section class="abstract">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Abstract</h2>
+        </div>
+        <div class="abstract-content">
+          <p>
+            Real-time text-to-speech (TTS) for Modern
+            <strong>Hebrew</strong> remains challenging due to the language’s
+            complex orthography. Many existing solutions overlook important
+            phonetic features such as <strong>stress</strong>, which are often
+            missing even when vowel marks are used.
+          </p>
+
+          <p>
+            To overcome these issues, we present <strong>Phonikud</strong>, a
+            lightweight, open-source
+            <strong>grapheme-to-phoneme (G2P)</strong> system that outputs fully
+            specified <strong>IPA transcriptions</strong> for Hebrew text. Our
+            method adapts an existing diacritization model with lightweight
+            adaptors, adding minimal latency.
+          </p>
+
+          <p>
+            Additionally, we release <strong>ILSpeech</strong>, a novel Hebrew
+            speech dataset with expert-annotated IPA transcriptions. This
+            dataset serves as the first benchmark for Hebrew G2P and provides
+            valuable training data for TTS systems.
+          </p>
+
+          <p>
+            Experimental results show that Phonikud achieves significantly
+            higher accuracy in Hebrew G2P compared to previous approaches,
+            improving the quality of downstream TTS systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audio Samples Section -->
+    <section class="audio-samples">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Audio Samples</h2>
+          <p>
+            Listen to samples generated by our Phonikud system across different
+            speakers and text complexity levels.
+          </p>
+        </div>
+
+        <div class="samples-grid">
+          <div class="sample-card">
+            <div class="sample-header">
+              <h3 class="sample-title">News Broadcast Style</h3>
+              <span class="sample-type">Formal</span>
+            </div>
+            <div class="hebrew-text">
+              שרת החינוך הציגה רפורמה חדשה בבחינות הבגרות שתחל בשנה הבאה
+            </div>
+            <div class="audio-controls">
+              <div class="audio-item">
+                <audio controls>
+                  <source src="samples/sample_formal.wav" type="audio/wav" />
+                  Your browser does not support audio.
+                </audio>
+              </div>
+            </div>
+          </div>
+
+          <div class="sample-card">
+            <div class="sample-header">
+              <h3 class="sample-title">Conversational Style</h3>
+              <span class="sample-type">Casual</span>
+            </div>
+            <div class="hebrew-text">
+              אני צריך לחדש את הדרכון, אבל כל פעם שוכח להכנס לאתר הרשמי
+            </div>
+            <div class="audio-controls">
+              <div class="audio-item">
+                <audio controls>
+                  <source src="samples/sample_casual.wav" type="audio/wav" />
+                  Your browser does not support audio.
+                </audio>
+              </div>
+            </div>
+          </div>
+
+          <div class="sample-card">
+            <div class="sample-header">
+              <h3 class="sample-title">Technical Content</h3>
+              <span class="sample-type">Specialized</span>
+            </div>
+            <div class="hebrew-text">
+              הטכנולוגיה מבצעת אינטגרציה של רכיבי חומרה ותוכנה מתקדמת
+            </div>
+            <div class="audio-controls">
+              <div class="audio-item">
+                <audio controls>
+                  <source
+                    src="samples/sample_specialized.wav"
+                    type="audio/wav"
+                  />
+                  Your browser does not support audio.
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Method Comparison</h2>
+          <p>
+            Comparative evaluation of Phonikud against existing Hebrew TTS
+            approaches
+          </p>
+        </div>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Text Sample</th>
+              <th>MMS</th>
+              <th>RoboShaul</th>
+              <th>LoHTM</th>
+              <th class="method-ours">Phonikud (Ours)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                class="hebrew-text"
+                style="background: transparent; border: none; padding: 1rem"
+              >
+                אז אני חושב שזה צירוף של כמה דברים
+              </td>
+              <td class="method-mms">
+                <audio controls>
+                  <source src="samples/1_mms.wav" type="audio/wav" />
+                </audio>
+              </td>
+              <td class="method-roboshul">
+                <audio controls>
+                  <source src="samples/1_roboshaul.wav" type="audio/wav" />
+                </audio>
+              </td>
+              <td class="method-lohtm">
+                <audio controls>
+                  <source src="samples/1_lohtm.wav" type="audio/wav" />
+                </audio>
+              </td>
+              <td class="method-ours">
+                <audio controls>
+                  <source src="./samples/1_ours.wav" type="audio/wav" />
+                </audio>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="hebrew-text"
+                style="background: transparent; border: none; padding: 1rem"
+              >
+                כל מה שאתם צריכים לעשות כדי לזכות
+              </td>
+              <td class="method-mms">
+                <audio controls>
+                  <source src="samples/2_mms.wav" type="audio/wav" />
+                </audio>
+              </td>
+              <td class="method-roboshul">
+                <audio controls>
+                  <source src="samples/2_roboshaul.wav" type="audio/wav" />
+                </audio>
+              </td>
+              <td class="method-lohtm">
+                <audio controls>
+                  <source src="samples/2_lohtm.wav" type="audio/wav" />
+                </audio>
+              </td>
+              <td class="method-ours">
+                <audio controls>
+                  <source src="samples/2_ours.wav" type="audio/wav" />
+                </audio>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="hebrew-text"
+                style="background: transparent; border: none; padding: 1rem"
+              >
+                עוזבים את החברה, נגיד, אחרי שנה מסויימת
+              </td>
+              <td class="method-mms">
+                <audio controls>
+                  <source src="samples/3_mms.wav" type="audio/wav" />
+                </audio>
+              </td>
+              <td class="method-roboshul">
+                <audio controls>
+                  <source src="samples/3_roboshaul.wav" type="audio/wav" />
+                </audio>
+              </td>
+              <td class="method-lohtm">
+                <audio controls>
+                  <source src="samples/3_lohtm.wav" type="audio/wav" />
+                </audio>
+              </td>
+              <td class="method-ours">
+                <audio controls>
+                  <source src="samples/3_ours.wav" type="audio/wav" />
+                </audio>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section class="citation">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Citation</h2>
+        </div>
+        <div class="citation-box">
+          <button class="copy-btn" onclick="copyToClipboard()">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+          <pre><code>@misc{alper2025phonikud,
+  title={Phonikud: Hebrew Grapheme-to-Phoneme Conversion for Real-Time},
+  author={Yakov Kolani and Maxim Melichov and Cobi Calev and Morris Alper},
+  year={2025},
+  eprint={2025.xxxxx},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2025.xxxxx},
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

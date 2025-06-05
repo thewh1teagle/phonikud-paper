@@ -1,0 +1,546 @@
+:root {
+    --primary-color: #2563eb;
+    --text-primary: #363636;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+    --surface: #ffffff;
+    --surface-secondary: #f9fafb;
+    --border: #e5e7eb;
+    --border-light: #f3f4f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.2px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--surface);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0 6rem 0;
+    background: var(--surface);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+}
+
+.authors {
+    margin-bottom: 3rem;
+}
+
+.author-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.author {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.author:not(:last-child)::after {
+    content: '';
+    margin-right: 0.5rem;
+}
+
+.author sup {
+  font-size: 0.65em;
+  vertical-align: super;
+  opacity: 0.9; /* or use color: #666; */
+  margin-left: 2px;
+}
+
+
+.affiliation {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    /* ensure tap target size */
+}
+
+.btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    color: white;
+}
+
+/* Mobile improvements */
+@media (max-width: 600px) {
+    .btn {
+        flex: 1 1 100%;
+        /* full width buttons stacking vertically */
+        justify-content: center;
+        /* center content */
+        padding: 0.6rem 1rem;
+        /* slightly smaller padding */
+        font-size: 0.9rem;
+        /* slightly smaller font */
+        min-height: 44px;
+        /* keep tap target */
+    }
+
+    .btn-group {
+        gap: 0.75rem;
+        justify-content: stretch;
+        /* buttons fill width */
+    }
+}
+
+/* Architecture Section */
+.architecture {
+    padding: 4rem 0;
+    background: var(--surface-secondary);
+    border-top: 1px solid var(--border-light);
+}
+
+.architecture-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+
+.architecture-visual {
+    text-align: center;
+}
+
+.architecture-placeholder {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  height: 480px;  /* 400px + 25px top + 25px bottom */
+  padding: 25px 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.architecture > img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .architecture-placeholder {
+    max-width: 90vw; /* smaller max width relative to viewport */
+    height: 320px;   /* smaller height */
+    padding: 15px 0; /* slightly reduced padding */
+  }
+}
+
+
+.architecture-placeholder i {
+    font-size: 3rem;
+    color: var(--text-muted);
+}
+
+/* Abstract Section */
+.abstract {
+    background-color: var(--surface-light);
+    border-left: 4px solid var(--accent-color);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+
+.abstract-content {
+    max-width: 700px;
+    /* narrower max-width */
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    /* slightly tighter */
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.abstract-content p {
+    margin-bottom: 1.5rem;
+    /* keep space between paragraphs */
+    max-width: 45em;
+    /* limit line length for readability */
+}
+
+
+/* Mobile Improvements for abstract */
+@media (max-width: 600px) {
+    .abstract {
+        padding: 3rem 1rem;
+        /* reduce vertical padding, add horizontal padding */
+    }
+
+    .abstract-content {
+        max-width: 100%;
+        /* full width with padding on parent */
+        font-size: 1rem;
+        /* slightly smaller font */
+        line-height: 1.5;
+        /* a bit tighter */
+        padding: 0 0.5rem;
+        /* optional small horizontal padding */
+    }
+
+    .abstract-content p {
+        margin-bottom: 1rem;
+        /* reduce spacing */
+    }
+}
+
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+
+/* Audio Samples Section */
+.audio-samples {
+    padding: 5rem 0;
+    background: var(--surface-secondary);
+    border-top: 1px solid var(--border-light);
+}
+
+.samples-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.sample-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    min-width: 300px;
+}
+
+.sample-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.sample-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.sample-type {
+    padding: 0.4rem 0.8rem;
+    background: var(--surface-secondary);
+    color: var(--text-secondary);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--border);
+}
+
+.hebrew-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    background: var(--surface-secondary);
+    border-radius: 8px;
+    color: var(--text-primary);
+}
+
+.audio-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.audio-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.audio-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+audio {
+    width: 100%;
+    min-width: 95px;
+    height: 40px;
+}
+
+/* Comparison Section */
+.comparison {
+    padding: 5rem 0;
+    background: var(--surface);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.comparison-table th {
+    background: var(--surface-secondary);
+    color: var(--text-primary);
+    padding: 1.2rem 1rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.comparison-table td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid var(--border-light);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.method-ours {
+    background: #f0f9ff;
+    font-weight: 600;
+}
+
+/* Citation Section */
+.citation {
+    padding: 5rem 0;
+    background: var(--surface-secondary);
+    border-top: 1px solid var(--border-light);
+}
+
+.citation-box {
+    background: var(--text-primary);
+    color: var(--surface);
+    padding: 2rem;
+    border-radius: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    position: relative;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .author-list {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .author:not(:last-child)::after {
+        content: '';
+        margin-right: 0;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 200px;
+        justify-content: center;
+    }
+
+    .comparison-table {
+        font-size: 0.85rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 1rem 0.5rem;
+    }
+
+    .sample-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+
+/* Allow horizontal scrolling on small devices */
+@media (max-width: 768px) {
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Make table cells more compact */
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.85rem;
+        white-space: normal;
+        /* allow text wrapping */
+        min-width: 120px;
+        /* minimum width per cell */
+    }
+
+    /* Reduce audio control size */
+    .comparison-table audio {
+        width: 120px;
+        /* shrink audio player width */
+        height: auto;
+    }
+
+    /* Optional: smaller Hebrew text */
+    .hebrew-text {
+        font-size: 0.9rem;
+    }
+
+
+
+
+    /* Fix audio height for mobile, where it is hidden for some reason */
+    .comparison-table audio {
+        height: 5px;
+    }
+
+    .comparison-table audio {
+        width: 100% !important;
+        max-width: 240px;
+        height: auto !important;
+        /* מאפשר גובה דינמי לפי התוכן */
+        min-height: 40px !important;
+        /* גובה מינימלי שיהיה נוח לראות */
+        display: inline-block !important;
+    }
+
+
+}
