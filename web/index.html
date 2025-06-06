@@ -76,7 +76,7 @@
         <div class="hero-content">
           <h1>Phonikud</h1>
           <p class="hero-subtitle">
-            Hebrew Grapheme-to-Phoneme Conversion for Real-Time Text-to-Speech
+            Hebrew Grapheme-to-Phoneme Conversion <br>for Real-Time Text-to-Speech
           </p>
 
           <div class="authors">
@@ -86,7 +86,7 @@
               <span class="author">Cobi Calev<sup>3</sup></span>
               <span class="author">Morris Alper<sup>4</sup></span>
             </div>
-            <p class="affiliation">Advanced Speech Processing Laboratory</p>
+            <p class="affiliation">Independent Research Group</p>
           </div>
 
           <div class="btn-group">
@@ -142,45 +142,26 @@
       </div>
     </section>
 
-    <!-- Abstract Section -->
-    <section class="abstract">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Abstract</h2>
-        </div>
-        <div class="abstract-content">
-          <p>
-            Real-time text-to-speech (TTS) for Modern
-            <strong>Hebrew</strong> remains challenging due to the language’s
-            complex orthography. Many existing solutions overlook important
-            phonetic features such as <strong>stress</strong>, which are often
-            missing even when vowel marks are used.
-          </p>
+<!-- Abstract Section -->
+<section class="abstract">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Abstract</h2>
+    </div>
+    <div class="abstract-content">
+      <p>
+        Real-time Hebrew text-to-speech is challenging due to complex orthography and missing stress information. We introduce <strong>Phonikud</strong>, a lightweight open-source grapheme-to-phoneme system producing accurate IPA transcriptions with minimal latency.  
+      </p>
+      <p>
+        We also release <strong>ILSpeech</strong>, a new Hebrew speech dataset with expert IPA annotations, providing a benchmark for G2P and TTS training.  
+      </p>
+      <p>
+        Phonikud outperforms previous methods, improving Hebrew TTS quality.
+      </p>
+    </div>
+  </div>
+</section>
 
-          <p>
-            To overcome these issues, we present <strong>Phonikud</strong>, a
-            lightweight, open-source
-            <strong>grapheme-to-phoneme (G2P)</strong> system that outputs fully
-            specified <strong>IPA transcriptions</strong> for Hebrew text. Our
-            method adapts an existing diacritization model with lightweight
-            adaptors, adding minimal latency.
-          </p>
-
-          <p>
-            Additionally, we release <strong>ILSpeech</strong>, a novel Hebrew
-            speech dataset with expert-annotated IPA transcriptions. This
-            dataset serves as the first benchmark for Hebrew G2P and provides
-            valuable training data for TTS systems.
-          </p>
-
-          <p>
-            Experimental results show that Phonikud achieves significantly
-            higher accuracy in Hebrew G2P compared to previous approaches,
-            improving the quality of downstream TTS systems.
-          </p>
-        </div>
-      </div>
-    </section>
 
     <section class="key-features">
       <div class="container">
