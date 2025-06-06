@@ -631,3 +631,28 @@ audio {
   word-break: keep-all;   /* prevents breaking inside words */
   overflow-wrap: normal;  /* avoid breaking words */
 }
+
+.affiliations {
+  display: flex;
+  justify-content: center;
+  gap: 2em; /* spacing between affiliations */
+  flex-wrap: wrap; /* in case on small screen */
+  margin-bottom: 1rem;
+}
+
+.affiliations span {
+  white-space: nowrap;
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+
+.affiliations sup {
+  margin-left: 0.2em;
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+
+.author a {
+  text-decoration: none;
+}
