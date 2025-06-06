@@ -81,10 +81,30 @@
           </p>
 
           <div class="author-list">
-            <span class="author"><a target="_blank" href="https://www.linkedin.com/in/yakov-kolani">Yakov Kolani</a><sup>1</sup></span>
-            <span class="author"><a target="_blank" href="https://www.linkedin.com/in/max-melichov">Maxim Melichov</a><sup>2</sup></span>
-            <span class="author"><a target="_blank" href="https://www.linkedin.com/in/kcalev">Cobi Calev</a><sup>1</sup></span>
-            <span class="author"><a target="_blank" href="https://morrisalp.github.io/">Morris Alper</a><sup>3</sup></span>
+            <span class="author"
+              ><a
+                target="_blank"
+                href="https://www.linkedin.com/in/yakov-kolani"
+                >Yakov Kolani</a
+              ><sup>1</sup></span
+            >
+            <span class="author"
+              ><a
+                target="_blank"
+                href="https://www.linkedin.com/in/max-melichov"
+                >Maxim Melichov</a
+              ><sup>2</sup></span
+            >
+            <span class="author"
+              ><a target="_blank" href="https://www.linkedin.com/in/kcalev"
+                >Cobi Calev</a
+              ><sup>1</sup></span
+            >
+            <span class="author"
+              ><a target="_blank" href="https://morrisalp.github.io/"
+                >Morris Alper</a
+              ><sup>3</sup></span
+            >
           </div>
           <div class="affiliations">
             <span>Independent Researcher<sup>1</sup></span>
@@ -153,19 +173,20 @@
         </div>
         <div class="abstract-content">
           <p>
-            Real-time Hebrew text-to-speech is challenging due to complex
-            orthography and missing stress information. We introduce
-            <strong>Phonikud</strong>, a lightweight open-source
-            grapheme-to-phoneme system producing accurate IPA transcriptions
-            with minimal latency.
+            Hebrew text-to-speech faces unique challenges due to missing vowel
+            markings and variable stress patterns. We present
+            <strong>Phonikud</strong>, an efficient, open-source
+            grapheme-to-phoneme system that delivers precise IPA transcriptions
+            with low latency suitable for real-time applications.
           </p>
           <p>
-            We also release <strong>ILSpeech</strong>, a new Hebrew speech
-            dataset with expert IPA annotations, providing a benchmark for G2P
-            and TTS training.
+            Alongside Phonikud, we introduce <strong>ILSpeech</strong>, a
+            meticulously annotated Hebrew speech corpus with expert IPA labels,
+            designed as a standard benchmark for G2P and TTS development.
           </p>
           <p>
-            Phonikud outperforms previous methods, improving Hebrew TTS quality.
+            Experimental results show that Phonikud significantly improves
+            Hebrew TTS accuracy and speed compared to existing approaches.
           </p>
         </div>
       </div>
@@ -173,7 +194,7 @@
 
     <section class="key-features">
       <div class="container">
-        <h2 class="section-title">Research Impact</h2>
+        <h2 class="section-title">What Makes Us Different</h2>
         <div class="features-list">
           <div class="feature-item">
             <div class="feature-icon">⏱️</div>
@@ -203,8 +224,9 @@
             <div>
               <h3>Data-Efficient Training</h3>
               <p>
-                Fine-tunes with as little as <strong>2 hours</strong> of data
-                leveraging other languages.
+                Fine-tunes the <strong>TTS models</strong> with as little as
+                <strong>2 hours</strong> of data by leveraging models from other
+                languages.
               </p>
             </div>
           </div>
@@ -214,8 +236,8 @@
             <div>
               <h3>Hebrew Phonetics</h3>
               <p>
-                Handles Hebrew <strong>stress</strong> and vocal shva missed by
-                big providers.
+                Handles Hebrew <strong>stress</strong> and
+                <strong>vocal shva</strong> missed by big providers.
               </p>
             </div>
           </div>
@@ -225,7 +247,7 @@
             <div>
               <h3>Assistive Tech</h3>
               <p>
-                Supports screen readers with low delay, even
+                Can be used on screen readers with low delay, even
                 <strong>offline</strong> or remote.
               </p>
             </div>
@@ -236,7 +258,7 @@
             <div>
               <h3>Open TTS Dataset</h3>
               <p>
-                Published a
+                We published a
                 <strong>studio-quality Hebrew speech dataset</strong> with ~2
                 hours of audio and hand-annotated phonemes.
               </p>
@@ -251,6 +273,18 @@
                 Released <strong>Phonikud weights</strong>,
                 <strong>Hebrew TTS models</strong>, and full
                 <strong>training code</strong>.
+              </p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📈</div>
+            <div>
+              <h3>Scalable by Design</h3>
+              <p>
+                The TTS just speaks phonemes - a clear way to write sounds. If
+                the G2P gives good phonemes, the speech sounds good. You can
+                also type phonemes yourself. Big models don’t work like this,
+                they’re more complicated and harder to control.
               </p>
             </div>
           </div>
