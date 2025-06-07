@@ -826,7 +826,7 @@ audio {
   }
 }
 
-@media (max-height: 840px) {
+@media (max-height: 840px) and (max-width: 2400px) {
   .hero {
     padding: 0;
   }
