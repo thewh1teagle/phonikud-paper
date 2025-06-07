@@ -292,6 +292,7 @@ body {
   padding: 5rem 0;
   background: var(--surface-secondary);
   border-top: 1px solid var(--border-light);
+  
 }
 
 .samples-grid {
@@ -300,6 +301,8 @@ body {
   justify-content: center;
   gap: 2.5rem;
   margin-top: 3rem;
+  width: 700px;
+  margin: auto;
 }
 
 .sample-card {
@@ -308,6 +311,7 @@ body {
   border-radius: 12px;
   padding: 2rem;
   min-width: 300px;
+  width: 100%;
 }
 
 .sample-header {
@@ -666,4 +670,138 @@ audio {
 
 .author a {
   text-decoration: none;
+}
+
+
+
+
+
+
+
+/* From text to speech */
+
+
+/* Text to Speech Process Section */
+.process-section {
+  padding: 5rem 0;
+  /* background: var(--surface); */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.process-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  /* border-radius: 12px; */
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.process-step {
+  margin-bottom: 2.5rem;
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.step-number {
+  background: var(--primary-color);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.step-content {
+  background: var(--surface-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.hebrew-text {
+  font-size: 1.2rem;
+  direction: rtl;
+  text-align: right;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.ipa-text {
+  font-family: 'JetBrains Mono', 'Monaco', monospace;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  direction: ltr;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.step-caption {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  font-style: italic;
+}
+
+.audio-player {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.audio-container {
+  text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .process-section {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .process-card {
+    padding: 1.5rem;
+  }
+  
+  .step-title {
+    font-size: 1.1rem;
+  }
+  
+  .hebrew-text {
+    font-size: 1rem;
+  }
+  
+  .ipa-text {
+    font-size: 1rem;
+  }
 }

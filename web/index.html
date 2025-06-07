@@ -299,6 +299,79 @@
       </div>
     </section>
 
+       <div class="process-section">
+        <div class="section-header">
+            <h2 class="section-title">From Text to Speech</h2>
+            <p class="section-subtitle">See how Phonikud transforms Hebrew text through each stage</p>
+        </div>
+
+        <div class="process-card">
+            <div class="process-step">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Text</div>
+                </div>
+                <div class="step-content">
+                    <div class="hebrew-text">מה שיפה בסרטונים שלה הוא כמה הם ספציפים.</div>
+                </div>
+                <div class="step-caption">Input: Regular Hebrew text without vowel markings</div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Diacritics</div>
+                </div>
+                <div class="step-content">
+                    <div class="hebrew-text">מָה שֶׁ|יָּפֶה בַּ|סִּרְטוֹנִים שֶׁלָּהּ הוּא כַּ֫מָּה הֵם סְפֵּצִ֫יפִים.</div>
+                </div>
+                <div class="step-caption">Enhanced diacritics with stress markers and vocal shva</div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Phonemes</div>
+                </div>
+                <div class="step-content">
+                    <div class="ipa-text">mˈa ʃejafˈe basiʁtonˈim ʃelˈa hˈu kˈama hˈem spetsˈifim.</div>
+                </div>
+                <div class="step-caption">Phonikud converts to precise IPA phonetic transcription</div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Audio</div>
+                </div>
+                <div class="step-content">
+                    <div class="audio-container">
+                        <audio class="audio-player" controls>
+                            <source src="samples/sample_from_text_to_speech.wav" type="audio/wav" />
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                <div class="step-caption">Real-time TTS synthesis from phonemes - listen to the result</div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-header">
+                    <div class="step-number">💡</div>
+                    <div class="step-title">Flexible Input</div>
+                </div>
+                <div class="step-content">
+                    <div style="text-align: center; color: var(--text-secondary); font-size: 0.95rem;">
+                        <strong>Pro tip:</strong> You can input at any stage! Whether you want the model to add diacritics, 
+                        add them yourself, or input precise phonemes directly - as long as phonemes are accurate, 
+                        speech will sound good. Try it in the demo!
+                    </div>
+                </div>
+                <div class="step-caption">Full control over the pipeline - input text, diacritics, or phonemes</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Audio Samples Section -->
     <section class="audio-samples">
       <div class="container">
