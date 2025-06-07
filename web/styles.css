@@ -38,7 +38,7 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 4rem 0 6rem 0;
+  padding: 1rem 0 1rem 0;
   background: var(--surface);
   text-align: center;
 }
@@ -168,7 +168,7 @@ body {
 
 /* Architecture Section */
 .architecture {
-  padding: 4rem 0;
+  padding: 1rem 0;
   background: var(--surface-secondary);
   border-top: 1px solid var(--border-light);
 }
@@ -189,7 +189,7 @@ body {
   width: 100%;
   max-width: 900px;
   height: 580px; /* 400px + 25px top + 25px bottom */
-  padding: 25px 0;
+  padding: 10px 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
