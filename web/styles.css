@@ -229,7 +229,7 @@ section {
   padding: 0 var(--spacing-sm);
   color: #2c3e50;
   max-width: 700px;
-  margin: 0 auto var(--spacing-xl);
+  margin: 0 auto var(--spacing-sm);
   border: 1.5px solid rgba(255, 255, 255, 0.3);
 }
 
