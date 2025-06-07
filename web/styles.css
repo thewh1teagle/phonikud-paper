@@ -43,7 +43,7 @@ section {
 }
 
 .section-title {
-  font-size: 2.25rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
@@ -209,7 +209,7 @@ section {
 
 .key-features .section-title {
   font-weight: 700;
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   margin-bottom: 1.5rem;
   text-align: center;
   color: #1a252f;
@@ -473,8 +473,8 @@ audio {
   font-weight: 500;
   direction: rtl;
   text-align: right;
-  margin-bottom: 1.5rem;
-  padding: 1.2rem;
+  /* margin-bottom: 1.5rem; */
+  /* padding: 1.2rem; */
   background: var(--surface-secondary);
   border-radius: 8px;
   color: var(--text-primary);
@@ -639,7 +639,7 @@ audio {
 
 @media (max-width: 600px) {
   .hero {
-    height: 100vh;
+    min-height: 100vh;
     padding: 4rem 0 0;
   }
 
@@ -754,7 +754,7 @@ audio {
 }
 
 /* Show only on mobile */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-height: 840px) {
   .mobile-scroll-btn {
     display: block;
   }
