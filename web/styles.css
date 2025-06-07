@@ -782,7 +782,7 @@ audio {
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .process-section {
-    padding: 3rem 0;
+    padding: 3rem 1rem;
   }
   
   .container {
