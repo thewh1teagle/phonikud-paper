@@ -733,7 +733,7 @@ audio {
 }
 
 /* Show only on mobile */
-@media (max-width: 768px) and (min-height: 840px) {
+@media (max-width: 768px) and (min-height: 740px) {
   .mobile-scroll-btn {
     display: block;
   }
