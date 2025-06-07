@@ -770,7 +770,7 @@ audio {
 
   .architecture-placeholder {
     max-width: 90vw;
-    height: 320px;
+    height: auto;
     padding: 10px 5px;
   }
 
