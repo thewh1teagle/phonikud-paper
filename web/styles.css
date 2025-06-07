@@ -24,11 +24,11 @@ body {
   background: var(--surface);
 }
 
-  body {
-        font-family: 'Inter', sans-serif;
-        background: #fafbfc;
-        padding: 2rem 0;
-    }
+body {
+  font-family: "Inter", sans-serif;
+  background: #fafbfc;
+  padding: 2rem 0;
+}
 
 .container {
   max-width: 1100px;
@@ -292,7 +292,6 @@ body {
   padding: 5rem 0;
   background: var(--surface-secondary);
   border-top: 1px solid var(--border-light);
-  
 }
 
 .samples-grid {
@@ -667,19 +666,11 @@ audio {
   vertical-align: super;
 }
 
-
 .author a {
   text-decoration: none;
 }
 
-
-
-
-
-
-
 /* From text to speech */
-
 
 /* Text to Speech Process Section */
 .process-section {
@@ -751,7 +742,7 @@ audio {
 }
 
 .ipa-text {
-  font-family: 'JetBrains Mono', 'Monaco', monospace;
+  font-family: "Noto Sans", sans-serif;
   font-size: 1.1rem;
   color: var(--text-primary);
   direction: ltr;
@@ -784,23 +775,23 @@ audio {
   .process-section {
     padding: 3rem 1rem;
   }
-  
+
   .container {
     padding: 0 1rem;
   }
-  
+
   .process-card {
     padding: 1.5rem;
   }
-  
+
   .step-title {
     font-size: 1.1rem;
   }
-  
+
   .hebrew-text {
     font-size: 1rem;
   }
-  
+
   .ipa-text {
     font-size: 1rem;
   }
