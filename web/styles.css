@@ -488,7 +488,7 @@ section {
 
 audio {
   width: 100%;
-  min-width: 95px;
+  min-width: 100px;
   height: 40px;
 }
 
@@ -827,3 +827,10 @@ audio {
 }
 
 
+
+
+.caption {
+    font-weight: 300;
+    font-size: 0.7em;
+    color: #666; /* optional for even lighter look */
+}
