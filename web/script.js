@@ -20,3 +20,14 @@ function copyToClipboard() {
         }, 2000);
     });
 }
+
+
+function scrollToNext() {
+  const nextSection = document.querySelector('.architecture');
+  if (nextSection) {
+    nextSection.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
