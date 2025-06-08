@@ -237,11 +237,13 @@ body {
   /* narrower max-width */
   margin: 0 auto;
   padding: 0 1rem;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   line-height: 1.6;
   /* slightly tighter */
   color: var(--text-secondary);
   text-align: left;
+  /* justify text: */
+  text-align: justify;
 }
 
 .abstract-content p {
@@ -569,6 +571,10 @@ audio {
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); */
   /* Optional subtle inner shadow for depth */
   /* box-shadow: inset 0 0 10px rgba(255,255,255,0.2), 0 8px 32px 0 rgba(31, 38, 135, 0.1); */
+
+
+  /* justify text */
+  text-align: justify;
 }
 
 .section-title {
