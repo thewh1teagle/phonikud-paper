@@ -133,15 +133,14 @@ y_min, y_max = ax.get_ylim()
 x_min, x_max = ax.get_xlim()
 
 # Draw vertical dashed line at RTF = 1.0 from top to bottom
-ax.axvline(x=1.0, color='#27ae60', linestyle='--', linewidth=3, alpha=0.8, zorder=5)
+ax.axvline(x=1.0, color="#000000", linestyle='--', linewidth=3, alpha=0.8, zorder=5)
 
-# Add text label to indicate real-time zone (left side)
-# Position it in the middle-left area of the real-time zone
-text_x = (x_min * 2 + 1.0) / 3  # About 1/3 from left edge toward 1.0
-text_y = (y_min + y_max) / 2 + (y_max - y_min) * 0.15  # A bit above middle
-ax.text(text_x, text_y, 'Real-Time Zone\n(RTF ≤ 1.0)', 
-        fontsize=16, fontweight='bold', ha='center', va='center', 
-        color='#27ae60')
+# Position text near the dashed line at the top (left side of the line)
+text_x = 0.95  # Slightly to the left of the line
+text_y = y_max - (y_max - y_min) * 0.05  # Near the top
+text_label = ax.text(text_x, text_y, 'Real-Time\n(RTF ≤ 1.0)', 
+                     fontsize=16, fontweight='bold', ha='right', va='top', 
+                     color="#000000", zorder=6)
 
 # Adjust layout to prevent labels from being cut off
 plt.tight_layout()
