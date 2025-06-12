@@ -63,12 +63,12 @@ for name, wer, rtf, category in filtered:
         va = 'center'
     elif name == "OpenAI":
         x_text = rtf
-        y_text = wer - 0.012
+        y_text = wer - 0.008
         ha = 'center'
         va = 'top'
     elif name == "Robo-Shaul":
-        x_text = rtf 
-        y_text = wer + 0.008
+        x_text = rtf + 0.208
+        y_text = wer - 0.001
         ha = 'left'
         va = 'center'
     elif name == "Piper":
@@ -82,13 +82,13 @@ for name, wer, rtf, category in filtered:
         ha = 'center'
         va = 'top'
     elif name == "SASPEECH":
-        x_text = rtf + 0.03
-        y_text = wer - 0.005
+        x_text = rtf + 0.02
+        y_text = wer - 0.000
         ha = 'left'
         va = 'center'
     elif name == "MMS":
         x_text = rtf * 0.9
-        y_text = wer 
+        y_text = wer - 0.005
         ha = 'right'
         va = 'bottom'
     else:
@@ -104,8 +104,8 @@ for name, wer, rtf, category in filtered:
 
 # Set x-axis to log scale and format it
 ax.set_xscale('log')
-ax.tick_params(axis='both', which='major', labelsize=14)
-ax.tick_params(axis='both', which='minor', labelsize=12)
+ax.tick_params(axis='both', which='major', labelsize=20)
+ax.tick_params(axis='both', which='minor', labelsize=20)
 ax.xaxis.set_major_formatter(ticker.ScalarFormatter())
 ax.xaxis.get_major_formatter().set_scientific(False)
 ax.xaxis.get_major_formatter().set_useOffset(False)
@@ -114,8 +114,8 @@ ax.xaxis.get_major_formatter().set_useOffset(False)
 ax.xaxis.set_minor_locator(ticker.LogLocator(base=10.0, subs=np.arange(2, 10) * 0.1))
 
 # Set axis labels with larger font
-ax.set_xlabel("← RTF (Faster)", fontsize=28, fontweight='bold')
-ax.set_ylabel("← WER (Precise)", fontsize=28, fontweight='bold')
+ax.set_xlabel("← RTF (Faster)", fontsize=24, fontweight='bold')
+ax.set_ylabel("← WER (Precise)", fontsize=24, fontweight='bold')
 
 
 # Remove title
