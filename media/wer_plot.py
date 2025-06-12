@@ -146,5 +146,5 @@ text_label = ax.text(text_x, text_y, 'Real-Time\n(RTF ≤ 1.0)',
 plt.tight_layout()
 
 # Save with high quality
-plt.savefig("plot.png", dpi=300, bbox_inches='tight', facecolor='white')
+plt.savefig("wer_plot.png", dpi=300, bbox_inches='tight', facecolor='white')
 plt.show()
