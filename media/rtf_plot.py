@@ -102,44 +102,22 @@ for name, wer, rtf, category in filtered:
     ax.text(x_text, y_text, label, fontsize=fontsize, ha=ha, va=va, 
             color='black', weight=weight, zorder=4)
 
-# Set x-axis to log scale and format it
 ax.set_xscale('log')
-ax.tick_params(axis='both', which='major', labelsize=20)
-ax.tick_params(axis='both', which='minor', labelsize=20)
-ax.xaxis.set_major_formatter(ticker.ScalarFormatter())
-ax.xaxis.get_major_formatter().set_scientific(False)
-ax.xaxis.get_major_formatter().set_useOffset(False)
+ax.xaxis.set_major_locator(ticker.LogLocator(base=10.0, subs=(1.0, 2.0, 5.0), numticks=10))
+ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"{x:.1f}"))
 
-# Add minor ticks for better readability
-ax.xaxis.set_minor_locator(ticker.LogLocator(base=10.0, subs=np.arange(2, 10) * 0.1))
+ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda y, _: f"{y:.2f}"))
+
+# Increase tick label font sizes
+ax.tick_params(axis='both', which='major', labelsize=18)
 
 # Set axis labels with larger font
 ax.set_xlabel("← RTF (Faster)", fontsize=24, fontweight='bold')
 ax.set_ylabel("← WER (Precise)", fontsize=24, fontweight='bold')
 
-
-# Remove title
-
 # Add subtle grid
 ax.grid(True, alpha=0.3, linestyle='--', linewidth=0.5)
 ax.set_axisbelow(True)
-
-# Create custom legend
-# from matplotlib.patches import Patch
-# legend_elements = [
-#     plt.scatter([], [], c=colors['Ours'], s=150, edgecolors='black', 
-#                 linewidths=1.5, label='Our Models'),
-#     plt.scatter([], [], c=colors['Open'], s=120, edgecolors='black', 
-#                 linewidths=1.5, label='Open Source'),
-#     plt.scatter([], [], c=colors['Proprietary'], s=120, edgecolors='black', 
-#                 linewidths=1.5, label='Proprietary')
-# ]
-
-# ax.legend(handles=legend_elements, loc='upper right', fontsize=14, 
-#           frameon=True, fancybox=True, shadow=True)
-
-# Adjust layout to prevent labels from being cut off
-plt.tight_layout()
 
 # Extend x-axis limits by 30% to make space for labels
 x_min, x_max = ax.get_xlim()
@@ -149,9 +127,24 @@ ax.set_xlim(x_min, x_max * 1.3)
 y_min, y_max = ax.get_ylim()
 ax.set_ylim(y_min - 0.01, y_max + 0.02)
 
-# Keep plot clean and simple
+# ADD REAL-TIME THRESHOLD LINE AT RTF = 1.0
+# Get the current axis limits
+y_min, y_max = ax.get_ylim()
+x_min, x_max = ax.get_xlim()
 
-# Remove figure caption
+# Draw vertical dashed line at RTF = 1.0 from top to bottom
+ax.axvline(x=1.0, color='#27ae60', linestyle='--', linewidth=3, alpha=0.8, zorder=5)
+
+# Add text label to indicate real-time zone (left side)
+# Position it in the middle-left area of the real-time zone
+text_x = (x_min * 2 + 1.0) / 3  # About 1/3 from left edge toward 1.0
+text_y = (y_min + y_max) / 2 + (y_max - y_min) * 0.15  # A bit above middle
+ax.text(text_x, text_y, 'Real-Time Zone\n(RTF ≤ 1.0)', 
+        fontsize=16, fontweight='bold', ha='center', va='center', 
+        color='#27ae60')
+
+# Adjust layout to prevent labels from being cut off
+plt.tight_layout()
 
 # Save with high quality
 plt.savefig("plot.png", dpi=300, bbox_inches='tight', facecolor='white')
