@@ -7,8 +7,8 @@ import matplotlib.ticker as ticker
 
 # Data for the models
 models = [
-    ("Piper", 0.08, 0.09, "Ours"),
-    ("StyleTTS2", 0.07, 0.50, "Ours"),
+    ("Piper", 0.11, 0.09, "Ours"),
+    # ("StyleTTS2", 0.07, 0.50, "Ours"),
     # ("HebTTS", 0.24, 25.44, "Open"),
     # ("LoTHM", 0.49, 84.75, "Open"),
     ("MMS", 0.20, 0.21, "Open"),
