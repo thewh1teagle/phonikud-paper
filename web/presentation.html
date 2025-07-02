@@ -37,9 +37,7 @@
             transition: transform 0.3s ease;
         }
         
-        .section-content:hover {
-            transform: translateY(-5px);
-        }
+
         
         .section-title {
             font-size: 2.5em;
@@ -80,7 +78,6 @@
         
         .challenge-card:hover {
             border-color: #2c5aa0;
-            transform: scale(1.02);
         }
         
         .card-title {
@@ -265,26 +262,19 @@
 
         /* Scroll indicator */
         .scroll-indicator {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: static;
+            margin-top: 30px;
             color: #2c5aa0;
             font-size: 24px;
-            animation: bounce 2s infinite;
-            z-index: 100;
+            text-align: center;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: opacity 0.3s ease, color 0.3s ease;
         }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
+        
+        .scroll-indicator:hover {
+            opacity: 1;
+            color: #1976d2;
         }
         
         @media (max-width: 768px) {
@@ -362,11 +352,11 @@
                 Hebrew writing is phonetically ambiguous, challenging TTS systems
             </div>
         </div>
-        <div class="scroll-indicator">↓</div>
+        <div class="scroll-indicator" onclick="scrollToSection2()">↓</div>
     </div>
     
     <!-- Section 2: Phonikud Solution -->
-    <div class="section">
+    <div class="section" id="section-2">
         <div class="section-content">
             <h1 class="section-title">Phonikud: Adding Missing Phonetic Information</h1>
             
@@ -407,9 +397,17 @@
             </div>
             
             <div class="key-insight">
-                Phonikud adds stress & vocal shva for perfect IPA transcription for TTS
+                Phonikud adds stress & vocal shva for fully-specified IPA transcription for TTS
             </div>
         </div>
     </div>
+    
+    <script>
+        function scrollToSection2() {
+            document.getElementById('section-2').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
