@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hebrew Writing Challenge & Phonikud Solution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            overflow-x: hidden;
+        }
+        
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        .section-content {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 1200px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .section-content:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            color: #2c5aa0;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .challenge-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+        }
+        
+        .challenge-card:hover {
+            border-color: #2c5aa0;
+            transform: scale(1.02);
+        }
+        
+        .card-title {
+            font-size: 1.3em;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .english-example {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 1.6em;
+            font-weight: bold;
+            line-height: 1.6;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .translation {
+            font-size: 1em;
+            color: #1976d2;
+            font-weight: 600;
+            font-style: italic;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(25, 118, 210, 0.1);
+            border-radius: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .hebrew-text {
+            font-size: 3em;
+            font-family: 'Times New Roman', serif;
+            color: #333;
+            margin: 20px 0;
+            direction: rtl;
+        }
+        
+        .blue-text {
+            color: #1976d2;
+            font-weight: 600;
+        }
+        
+        .pronunciation-examples {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            width: 100%;
+        }
+        
+        .pronunciation-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 1.3em;
+        }
+        
+        .key-insight {
+            background: #2c5aa0;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-top: 30px;
+        }
+        
+        .phonikud-process {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .process-step {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .step-number {
+            background: #2c5aa0;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .step-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+        }
+        
+        .step-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .step-description {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .arrow {
+            font-size: 2em;
+            color: #2c5aa0;
+            font-weight: bold;
+        }
+        
+        .phonetic-result {
+            background: #e8f5e8;
+            color: #2e7d32;
+            padding: 10px;
+            border-radius: 6px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .pronunciation-line span:first-child {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        
+        .checkmark {
+            color: #4caf50;
+            margin-right: 5px;
+        }
+        
+        .innovation-box {
+            background: #f0f7ff;
+            border-left: 4px solid #2c5aa0;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .innovation-title {
+            color: #2c5aa0;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .innovation-points {
+            list-style: none;
+        }
+        
+        .innovation-points li {
+            margin: 8px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .innovation-points li::before {
+            content: "•";
+            color: #2c5aa0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #2c5aa0;
+            font-size: 24px;
+            animation: bounce 2s infinite;
+            z-index: 100;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .phonikud-process {
+                flex-direction: column;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+            }
+            
+            .translation {
+                white-space: normal;
+                font-size: 0.9em;
+            }
+            
+            .english-example {
+                font-size: 1.1em;
+            }
+
+            .challenge-card {
+                min-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Section 1: The Challenge of Hebrew Writing -->
+    <div class="section">
+        <div class="section-content">
+            <h1 class="section-title">The Challenge of Hebrew Writing</h1>
+            
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <div class="english-example">
+                        Vwls r nt prsnt n ths sntnc
+                    </div>
+                    <div class="translation">Vowels are not present in this sentence</div>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3 class="card-title">Unvocalized Hebrew</h3>
+                    <div class="hebrew-text">ספר</div>
+                    <p class="step-description">Multiple possible pronunciations</p>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3 class="card-title">Same letters, different words</h3>
+                    <div class="pronunciation-examples">
+                        <div class="pronunciation-line">
+                            <span>/sˈefer/</span>
+                            <span>(book)</span>
+                        </div>
+                        <div class="pronunciation-line">
+                            <span>/sapˈar/</span>
+                            <span>(barber)</span>
+                        </div>
+                        <div class="pronunciation-line">
+                            <span>/safˈar/</span>
+                            <span>&nbsp;&nbsp;(he counted)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-insight">
+                Hebrew writing is phonetically ambiguous, challenging TTS systems
+            </div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </div>
+    
+    <!-- Section 2: Phonikud Solution -->
+    <div class="section">
+        <div class="section-content">
+            <h1 class="section-title">Phonikud: Adding Missing Phonetic Information</h1>
+            
+            <div class="phonikud-process">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Unvocalized Hebrew</h3>
+                    <div class="step-content">
+                        <div class="hebrew-text">תרד</div>
+                    </div>
+                    <p class="step-description">Ambiguous pronunciation</p>
+                </div>
+                
+                <div class="arrow">→</div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Vocalized Hebrew</h3>
+                    <div class="step-content">
+                        <div class="hebrew-text">תֶּרֶד</div>
+                    </div>
+                    <p class="step-description">Vowels added, but stress unclear</p>
+                </div>
+                
+                <div class="arrow">→</div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Enhanced Vocalization</h3>
+                    <div class="step-content">
+                        <div class="hebrew-text">תֶּ֫רֶד</div>
+                        <div class="phonetic-result">
+                            /tˈeʁed/
+                        </div>
+                    </div>
+                    <p class="step-description"><span class="checkmark">✓</span> Complete pronunciation</p>
+                </div>
+            </div>
+            
+            <div class="key-insight">
+                Phonikud adds stress & vocal shva for perfect IPA transcription for TTS
+            </div>
+        </div>
+    </div>
+</body>
+</html>
