@@ -618,7 +618,6 @@ audio {
 .footer-link:hover {
   color: var(--primary-color);
   border-color: var(--primary-color);
-  transform: translateY(-2px);
 }
 
 .footer-link img {
