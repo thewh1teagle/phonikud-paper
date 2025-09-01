@@ -49,7 +49,7 @@ body {
   line-height: 1.6;
   color: var(--text-primary);
   background: #fafbfc;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
   font-size: var(--font-size-base);
 }
 
@@ -74,6 +74,7 @@ section {
   color: var(--text-primary);
   margin-bottom: var(--spacing-xs);
 }
+
 
 /* ===== HERO SECTION ===== */
 .hero {
@@ -552,6 +553,23 @@ audio {
   font-weight: 600;
 }
 
+/* ===== MORE CONTENT SECTION ===== */
+.more-content {
+  background: var(--surface);
+}
+
+.inline-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.inline-link:hover {
+  border-bottom-color: var(--primary-color);
+}
+
 /* ===== CITATION SECTION ===== */
 .citation {
   background: var(--surface-secondary);
@@ -593,6 +611,24 @@ audio {
   color: var(--text-secondary);
   font-size: var(--font-size-small);
   margin: 0;
+}
+
+.footer-nav {
+  margin-top: var(--spacing-xs);
+}
+
+.footer-nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-nav-link:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
 }
 
 .footer-links {

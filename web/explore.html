@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page Title -->
+    <title>Explore Phonikud - Resources, Demos & Tools</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore Phonikud resources including datasets, interactive demos, tools, and community content for Hebrew text-to-speech and G2P systems." />
+    <meta name="keywords"
+        content="Phonikud resources, Hebrew TTS demos, G2P tools, datasets, interactive demos, Hebrew linguistics" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://phonikud.github.io/explore.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Explore Phonikud - Resources, Demos & Tools" />
+    <meta property="og:description"
+        content="Explore Phonikud resources including datasets, interactive demos, tools, and community content for Hebrew text-to-speech and G2P systems." />
+    <meta property="og:image" content="https://thewh1teagle.github.io/phonikud-paper/media/architecture.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./media/favicon.ico" />
+
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="showcase-styles.css" />
+</head>
+
+<body>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-nav">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Research</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Explore Phonikud</h1>
+                <p class="hero-subtitle">
+                    Resources, demos, and tools
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demos Section -->
+    <section class="demos">
+        <div class="container">
+            <div class="demo-items">
+                <div class="demo-item">
+                    <h3 class="demo-title">StyleTTS2 Hebrew Model</h3>
+                    <p class="demo-description">New Hebrew TTS model based on StyleTTS2 with accurate IPA transcription and stress markers. Optimized for local deployment on simple hardware.</p>
+                    <div class="demo-video-container">
+                        <video controls class="demo-video">
+                            <source src="media/long-form-jerusalem.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="demo-item">
+                    <h3 class="demo-title">Hebrew-English Mixed Input</h3>
+                    <p class="demo-description">Demonstration of seamless Hebrew and English mixing in the same input. Part of ongoing improvements to build the most powerful Hebrew TTS model.</p>
+                    <div class="demo-video-container">
+                        <video controls class="demo-video">
+                            <source src="media/mixed-english.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Dataset Cards -->
+                <div class="demo-item resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon audio-data">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h3 class="resource-title">ILSpeech Dataset</h3>
+                            <div class="resource-tags">
+                                <span class="resource-tag">Audio</span>
+                                <span class="resource-tag">2 hours</span>
+                            </div>
+                        </div>
+                        <a href="https://huggingface.co/datasets/thewh1teagle/ILSpeech" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <p class="resource-description">Studio-quality Hebrew speech dataset with two male speakers. Includes clean text and phoneme annotations in LJSpeech format, phonemized using Phonikud.</p>
+                </div>
+
+                <div class="demo-item resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon audio-data">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h3 class="resource-title">SASpeech Dataset</h3>
+                            <div class="resource-tags">
+                                <span class="resource-tag">Audio</span>
+                                <span class="resource-tag">13+ hours</span>
+                            </div>
+                        </div>
+                        <a href="https://huggingface.co/datasets/thewh1teagle/saspeech" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <p class="resource-description">Large-scale Hebrew speech dataset with single-speaker audio at 44.1kHz. Enhanced from OpenSLR with Hebrew diacritics and Phonikud-generated phonemes.</p>
+                </div>
+
+                <div class="demo-item resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon text-data">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h3 class="resource-title">Hebrew Text Dataset</h3>
+                            <div class="resource-tags">
+                                <span class="resource-tag">Text</span>
+                                <span class="resource-tag">2M lines</span>
+                            </div>
+                        </div>
+                        <a href="https://huggingface.co/datasets/thewh1teagle/heb-text" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <p class="resource-description">Clean Hebrew text dataset based on Common Crawl containing modern Hebrew content from across the internet. Enhanced with diacritics, stress marks, and morphological information.</p>
+                </div>
+
+                <div class="demo-item resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon text-data">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h3 class="resource-title">Phonikud Training Data</h3>
+                            <div class="resource-tags">
+                                <span class="resource-tag">Text</span>
+                                <span class="resource-tag">5M lines</span>
+                            </div>
+                        </div>
+                        <a href="https://huggingface.co/datasets/thewh1teagle/phonikud-data" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <p class="resource-description">Training dataset used to create the first version of Phonikud. Contains clean Hebrew sentences with nikud and phonetic marks, with manual corrections for high-frequency words.</p>
+                </div>
+
+                <div class="demo-item resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon interactive-tool">
+                            <i class="fas fa-mouse"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h3 class="resource-title">Interactive Presentation</h3>
+                            <div class="resource-tags">
+                                <span class="resource-tag">Interactive</span>
+                            </div>
+                        </div>
+                        <a href="presentation.html" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <p class="resource-description">Visual presentation that explains the challenges of Hebrew writing system and how Phonikud solves the phonetic ambiguity problem. Demonstrates multiple pronunciations of the same Hebrew text.</p>
+                </div>
+
+                <div class="demo-item resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon interactive-tool">
+                            <i class="fas fa-mouse"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h3 class="resource-title">Hebrew TTS Demo</h3>
+                            <div class="resource-tags">
+                                <span class="resource-tag">Interactive</span>
+                            </div>
+                        </div>
+                        <a href="https://huggingface.co/spaces/thewh1teagle/phonikud-tts" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <p class="resource-description">Fast Text-to-Speech in Hebrew with Phonetic Control. Enter unvocalized Hebrew text to generate speech with control over text, diacritics, and phonemes.</p>
+                </div>
+
+                <div class="demo-item resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon interactive-tool">
+                            <i class="fas fa-mouse"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h3 class="resource-title">Hebrew AI Assistant</h3>
+                            <div class="resource-tags">
+                                <span class="resource-tag">Interactive</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/thewh1teagle/phonikud-assistant" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <p class="resource-description">Local AI assistant powered by Phonikud for natural Hebrew speech synthesis. Wake it up with "Picovoice!" and have conversations with full offline TTS capabilities.</p>
+                </div>
+
+                <div class="demo-item resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon interactive-tool">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h3 class="resource-title">Discord Community</h3>
+                            <div class="resource-tags">
+                                <span class="resource-tag">Community</span>
+                            </div>
+                        </div>
+                        <a href="https://discord.gg/trfCMfhhum" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <p class="resource-description">Join our Discord community to discuss Text-to-Speech, Grapheme-to-Phoneme conversion, Hebrew linguistics, and collaborate on advancing Hebrew speech technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="copyright">Phonikud. Open Source Hebrew Grapheme to Phoneme</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="https://github.com/thewh1teagle/phonikud" target="_blank" class="footer-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://huggingface.co/datasets/thewh1teagle/ILSpeech" target="_blank" class="footer-link">
+                            <img src="./media/hf-logo.svg" alt="Hugging Face" width="24" height="24" />
+                        </a>
+                        <a href="https://discord.gg/trfCMfhhum" target="_blank" class="footer-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="single-media-playback.js"></script>
+    <script src="script.js"></script>
+    <script src="showcase-script.js"></script>
+</body>
+
+</html>

@@ -1,12 +1,4 @@
-// Prevent several audio files from playing at the same time
-const tracks = Array.from(document.querySelectorAll('audio'));
-tracks.forEach(function(track) {
-    track.addEventListener('play', (event) => {
-      tracks.forEach(function(track) {
-        if(track !== event.target) track.pause();
-      })
-    })
-})
+// Single media playback functionality is in single-media-playback.js
 
 // Copy citation function
 function copyToClipboard() {
