@@ -853,6 +853,11 @@ audio {
 
 @media (max-width: 600px) {
   .hero {
+    padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-md);
+  }
+  
+  /* Only apply full-height hero to main index page */
+  .hero.main-hero {
     min-height: 100vh;
     padding: var(--spacing-xl) var(--spacing-sm) 1rem;
   }

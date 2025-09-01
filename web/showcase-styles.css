@@ -324,6 +324,14 @@
   }
 }
 
+/* Fix mobile hero spacing for explore page */
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto !important;
+    padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-md) !important;
+  }
+}
+
 /* Filter Animation */
 .showcase-card {
   opacity: 1;
