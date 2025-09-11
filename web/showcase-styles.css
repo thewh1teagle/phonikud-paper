@@ -44,34 +44,90 @@
 
 .demo-item {
   flex: 1;
-  min-width: 450px;
-  max-width: 550px;
-  text-align: center;
+  min-width: 350px;
+  max-width: 450px;
+  text-align: left;
+}
+
+.demo-card {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+
+.demo-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.demo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* Same color for all demo icons */
+.demo-icon { background: #8b5cf6; }
+
+/* Special color for Hebrew-English Mixed Input */
+.demo-item:nth-child(2) .demo-icon { background: #10b981; }
+
+/* Special color for Voice Cloning Integration */
+.demo-item:nth-child(3) .demo-icon { background: #f59e0b; }
+
+/* Special color for Zonos Hebrew Model */
+.demo-item:nth-child(5) .demo-icon { background: #3b82f6; }
+
+.demo-meta {
+  flex: 1;
 }
 
 .demo-title {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-base);
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: var(--spacing-sm);
+  margin: 0 0 4px 0;
+}
+
+.demo-tags {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.demo-tag {
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 .demo-description {
   color: var(--text-secondary);
-  font-size: var(--font-size-base);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-lg);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-md) 0;
 }
 
 .demo-video-container {
-  max-width: 600px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto var(--spacing-md);
+  margin-top: auto;
 }
 
 .demo-video {
@@ -79,6 +135,7 @@
   height: auto;
   display: block;
 }
+
 
 .demo-link-container {
   max-width: 600px;
@@ -216,6 +273,7 @@
 @media (max-width: 768px) {
   .demo-items {
     flex-direction: column;
+    gap: var(--spacing-lg);
   }
   
   .demo-item {
@@ -229,12 +287,22 @@
   }
   
   .demo-title {
-    font-size: var(--font-size-large-mobile);
+    font-size: var(--font-size-base);
   }
   
   .demo-description {
-    font-size: var(--font-size-base-mobile);
+    font-size: var(--font-size-small);
   }
+  
+  .demo-header {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  .demo-card {
+    min-height: auto;
+  }
+}
 
   .app-header {
     flex-direction: column;
