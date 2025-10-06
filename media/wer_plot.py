@@ -45,13 +45,13 @@ for name, wer, rtf, category in filtered:
                         linewidths=edgewidth, zorder=3, alpha=0.8)
 
     # Adjust text position for each model
-    if name == "Piper Medium":
-        x_text = rtf * 0.9
-        y_text = wer + 0.013
+    if name == "Piper - Medium":
+        x_text = rtf * 0.88
+        y_text = wer + 0.016
         ha = 'left'
         va = 'bottom'
-    elif name == "Piper High":
-        x_text = rtf * 1.10
+    elif name == "Piper - High":
+        x_text = rtf * 1.08
         y_text = wer
         ha = 'left'
         va = 'center'
