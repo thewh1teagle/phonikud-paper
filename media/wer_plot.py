@@ -7,8 +7,8 @@ import matplotlib.ticker as ticker
 
 # Data for the models
 models = [
-    ("Piper (Medium)", 0.231, 0.09, "Ours"),
-    ("Piper (High)", 0.213, 0.13, "Ours"),
+    ("Piper - Medium", 0.231, 0.09, "Ours"),
+    ("Piper - High", 0.213, 0.13, "Ours"),
     ("StyleTTS2", 0.188, 0.50, "Ours"),
     ("MMS", 0.520, 0.21, "Open"),
     ("SASPEECH", 0.374, 0.16, "Open"),
@@ -45,13 +45,13 @@ for name, wer, rtf, category in filtered:
                         linewidths=edgewidth, zorder=3, alpha=0.8)
 
     # Adjust text position for each model
-    if name == "Piper (Medium)":
+    if name == "Piper Medium":
         x_text = rtf * 0.9
-        y_text = wer + 0.015
+        y_text = wer + 0.013
         ha = 'left'
         va = 'bottom'
-    elif name == "Piper (High)":
-        x_text = rtf * 1.15
+    elif name == "Piper High":
+        x_text = rtf * 1.10
         y_text = wer
         ha = 'left'
         va = 'center'
@@ -101,9 +101,9 @@ for name, wer, rtf, category in filtered:
         ha = 'left'
         va = 'center'
     elif name == "MMS":
-        x_text = rtf * 0.9
-        y_text = wer - 0.005
-        ha = 'right'
+        x_text = rtf
+        y_text = wer + 0.008
+        ha = 'center'
         va = 'bottom'
     else:
         x_text = rtf * 1.15
