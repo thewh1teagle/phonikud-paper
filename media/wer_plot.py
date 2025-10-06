@@ -7,15 +7,14 @@ import matplotlib.ticker as ticker
 
 # Data for the models
 models = [
-    ("Piper", 0.11, 0.09, "Ours"),
-    # ("StyleTTS2", 0.07, 0.50, "Ours"),
-    # ("HebTTS", 0.24, 25.44, "Open"),
-    # ("LoTHM", 0.49, 84.75, "Open"),
-    ("MMS", 0.20, 0.21, "Open"),
-    ("SASPEECH", 0.11, 0.16, "Open"),
-    ("Robo-Shaul", 0.08, 1.58, "Open"),
-    ("Google", 0.04, 4.08, "Proprietary"),
-    ("OpenAI", 0.05, 1.60, "Proprietary"),
+    ("Piper (Medium)", 0.231, 0.09, "Ours"),
+    ("Piper (High)", 0.213, 0.13, "Ours"),
+    ("StyleTTS2", 0.188, 0.50, "Ours"),
+    ("MMS", 0.520, 0.21, "Open"),
+    ("SASPEECH", 0.374, 0.16, "Open"),
+    ("RoboShaul", 0.245, 1.58, "Open"),
+    ("Gemini", 0.155, 1.22, "Proprietary"),
+    ("OpenAI", 0.187, 1.60, "Proprietary"),
 ]
 
 # Filter out models with None values for WER or RTF
@@ -46,7 +45,22 @@ for name, wer, rtf, category in filtered:
                         linewidths=edgewidth, zorder=3, alpha=0.8)
 
     # Adjust text position for each model
-    if name == "HebTTS":
+    if name == "Piper (Medium)":
+        x_text = rtf * 0.9
+        y_text = wer + 0.015
+        ha = 'left'
+        va = 'bottom'
+    elif name == "Piper (High)":
+        x_text = rtf * 1.15
+        y_text = wer
+        ha = 'left'
+        va = 'center'
+    elif name == "Gemini":
+        x_text = rtf
+        y_text = wer - 0.008
+        ha = 'center'
+        va = 'top'
+    elif name == "HebTTS":  
         x_text = rtf * 0.75
         y_text = wer
         ha = 'right'
@@ -66,11 +80,11 @@ for name, wer, rtf, category in filtered:
         y_text = wer - 0.008
         ha = 'center'
         va = 'top'
-    elif name == "Robo-Shaul":
-        x_text = rtf + 0.208
-        y_text = wer - 0.001
-        ha = 'left'
-        va = 'center'
+    elif name == "RoboShaul":
+        x_text = rtf
+        y_text = wer + 0.012
+        ha = 'center'
+        va = 'bottom'
     elif name == "Piper":
         x_text = rtf * 0.9
         y_text = wer  - 0.010
@@ -78,7 +92,7 @@ for name, wer, rtf, category in filtered:
         va = 'top'
     elif name == "StyleTTS2":
         x_text = rtf * 0.8
-        y_text = wer - 0.01
+        y_text = wer - 0.018
         ha = 'center'
         va = 'top'
     elif name == "SASPEECH":
