@@ -211,9 +211,9 @@ section {
   top: 0.6rem;
   right: 0.6rem;
   background: transparent;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   border: none;
-  padding: 0.35rem;
+  padding: 0.4rem;
   border-radius: 6px;
   cursor: pointer;
   display: flex;
