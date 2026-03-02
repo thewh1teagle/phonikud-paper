@@ -1,3 +1,6 @@
+// Initialize Lucide icons
+lucide.createIcons();
+
 // Single media playback functionality is in single-media-playback.js
 
 // Copy citation function
