@@ -288,7 +288,6 @@ section {
 .feature-item p {
   font-size: 0.72rem;
   margin: 0;
-  margin-top: auto;
   color: var(--text-secondary);
   line-height: 1.4;
   font-style: normal;
@@ -345,18 +344,24 @@ section {
 /* ===== ABSTRACT SECTION ===== */
 .abstract {
   background-color: var(--surface-light);
-  border-left: 4px solid var(--accent-color);
   border-radius: 8px;
 }
 
 .abstract-content {
-  max-width: 700px;
+  max-width: 680px;
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.85;
   color: var(--text-secondary);
-  text-align: left;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.abstract-content em {
+  color: var(--text-primary);
+  font-style: normal;
+  font-weight: 600;
 }
 
 .abstract-content p {
