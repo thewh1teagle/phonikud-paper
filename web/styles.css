@@ -208,20 +208,28 @@ section {
 
 .copy-btn {
   position: absolute;
-  top: var(--spacing-sm);
-  right: var(--spacing-sm);
-  background: var(--primary-color);
-  color: white;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: transparent;
+  color: var(--text-muted);
   border: none;
-  padding: var(--spacing-xs) var(--spacing-sm);
+  padding: 0.35rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: var(--font-size-xs);
-  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.copy-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .copy-btn:hover {
-  background: #1d4ed8;
+  color: var(--primary-color);
 }
 
 /* ===== KEY FEATURES SECTION ===== */

@@ -8,10 +8,13 @@ function copyToClipboard() {
     const citation = document.querySelector('.citation-box pre code').textContent;
     navigator.clipboard.writeText(citation).then(() => {
         const btn = document.querySelector('.copy-btn');
-        const originalText = btn.innerHTML;
-        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<i data-lucide="check"></i>';
+        btn.style.color = '#16a34a';
+        lucide.createIcons({ nodes: [btn] });
         setTimeout(() => {
-            btn.innerHTML = originalText;
+            btn.innerHTML = originalHTML;
+            btn.style.color = '';
         }, 2000);
     });
 }
